@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+:root {
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    /* ### Neutral  */
+
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--Dark-Blue);
+    font-family: 'Manrope', sans-serif;
+}
+
+/* collapsing margin darn it */
+main {
+    display: grid;
+}
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 1rem 1rem 0;
+    margin-inline: auto;
+    margin-block: clamp(3rem, 15vw, 10rem);
+    max-width: 300px;
+    border-radius: .5rem;
+    color: var(--Light-Cyan);
+    background-color: var(--Dark-Grayish-Blue);
+}
+
+        /* specificity difference  
+        between :where() and :is() */
+/* :where(.hero > :not(button), .hero > picture img) { */
+:is(.hero > :not(button), .hero > picture img) {
+    margin-top: 1rem;
+}
+
+/* JUst wanted to test the :where selector 
+you can use this as well*/
+
+/* .hero>*,
+.hero>picture img {
+    margin-top: 1rem;
+    background-color: red;
+} */
+
+.title {
+    font-size: .7rem;
+    color: var(--Neon-Green);
+}
+
+.title {
+    letter-spacing: 2px;
+}
+
+button {
+    cursor: pointer;
+    translate: 0 50%;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: var(--Neon-Green);
+    background-image: url("./images/icon-dice.svg");
+    background-repeat: no-repeat;
+    background-size:  50%;
+    background-position: center;
+}
+button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: 0 0 10px var(--Neon-Green);
+    background-color: blue;
+    border-radius: 50%;
+    z-index: -990;
+}
+button:hover {
+
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50%;
+}

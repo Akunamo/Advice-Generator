@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Advice generator app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="advice.js" defer></script>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <div class="hero">
+      <h1 class="title">Advice <span id="slip-id"></span></h1>
+      <p class="advice"><q></q></p>
+      <picture>
+        <source media="(min-width: 45rem)" srcset="images/pattern-divider-desktop.svg">
+        <img src="./images/pattern-divider-mobile.svg" alt="">
+      </picture>
+      <button aria-label="generate advice"></button>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Akunamo</a>.
+  </footer>
+</body>
+
+</html>
