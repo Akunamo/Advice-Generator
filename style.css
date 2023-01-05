@@ -88,19 +88,23 @@ button {
     background-repeat: no-repeat;
     background-size:  50%;
     background-position: center;
+    transition:  scale 200ms ease;
 }
+
+button:active {scale: .9;}   
+
 button::after {
     content: "";
     position: absolute;
     inset: 0;
-    box-shadow: 0 0 10px var(--Neon-Green);
-    background-color: blue;
     border-radius: 50%;
+    box-shadow: 0 0 25px var(--Neon-Green);
     z-index: -990;
+    opacity: .3;
+    transition: opacity 350ms ease;
 }
-button:hover {
-
-}
+button:hover::after,
+button:focus-visible::after {opacity: 1;}   
 
 footer {
     position: absolute;
